@@ -1,0 +1,12 @@
+{
+    "manifest_version": 2,
+    "version": "1.0",
+    "name": "adwords detector",
+    "content_scripts": [{
+        "js": [ "content-script.js" ],
+        "matches": [ "https://www.google.com/search*" ]
+    }],
+    "permissions": [
+        "storage"
+    ]
+}

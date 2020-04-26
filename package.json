@@ -1,0 +1,15 @@
+{
+  "name": "adwords-detector",
+  "version": "1.0.0",
+  "description": "Detect unknown domains appearing on Google Adwords",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "author": "xl1",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "0.0.104",
+    "typescript": "^3.8.3"
+  }
+}
