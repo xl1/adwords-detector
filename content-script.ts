@@ -20,7 +20,7 @@ const hosts = new StorageItem<string[]>('hosts', []);
 async function checkAds(query: string) {
     const html = await fetch(`/search?q=${encodeURIComponent(query)}`, { credentials: 'omit' }).then(r => r.text());
     const doc = new DOMParser().parseFromString(html, 'text/html');
-    const nodes = Array.from(doc.querySelectorAll<HTMLAnchorElement>('.ads-ad a[href]'));
+    const nodes = Array.from(doc.querySelectorAll<HTMLAnchorElement>('#tads a[href]'));
 
     const whitelists = await hosts.get();
     for (const host of new Set(nodes.map(n => n.host))) {
